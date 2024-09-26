@@ -1,5 +1,6 @@
 package com.ruoyi.system.api.factory;
 
+import com.ruoyi.system.api.domain.SysFileInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.openfeign.FallbackFactory;
@@ -29,6 +30,17 @@ public class RemoteFileFallbackFactory implements FallbackFactory<RemoteFileServ
             public R<SysFile> upload(MultipartFile file)
             {
                 return R.fail("上传文件失败:" + throwable.getMessage());
+            }
+
+            /**
+             * 保存系统文件
+             *
+             * @param sysFileInfo 系统文件
+             * @return 结果
+             */
+            @Override
+            public R<Boolean> saveFile(SysFileInfo sysFileInfo) {
+                return R.fail("文件入库失败:" + throwable.getMessage());
             }
         };
     }

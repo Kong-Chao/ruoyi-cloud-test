@@ -9,7 +9,7 @@
         <version>3.6.4</version>
     </parent>
 
-    <artifactId>ruoyi-modules-test</artifactId>
+    <artifactId>ruoyi-modules-rabbitmq</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -27,5 +27,4 @@
             <artifactId>ruoyi-common-rabbitmq</artifactId>
         </dependency>
     </dependencies>
-
 </project>

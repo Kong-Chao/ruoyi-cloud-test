@@ -1,7 +1,7 @@
 server:
-  port: 9204
+  port: 9001
   servlet:
-    application-display-name: ruoyi-test
+    context-path: /
 spring:
   profiles:
     active: dev

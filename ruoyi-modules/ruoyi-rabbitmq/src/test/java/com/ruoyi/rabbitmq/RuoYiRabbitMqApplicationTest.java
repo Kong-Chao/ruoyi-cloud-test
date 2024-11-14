@@ -57,4 +57,44 @@ class RuoYiRabbitMqApplicationTest {
     }
 
 
+    @Test
+    public void testSendTopicExchange1() {
+        // 交换机名称
+        String exchangeName = "demo.topic";
+        // 消息
+        String message = "喜报！孙悟空大战哥斯拉，胜!";
+        // 发送消息
+        rabbitTemplate.convertAndSend(exchangeName, "china.news", message);
+    }
+
+    @Test
+    public void testSendTopicExchange2() {
+        // 交换机名称
+        String exchangeName = "demo.topic";
+        // 消息
+        String message = "喜报！孙悟空大战哥斯拉，胜!";
+        // 发送消息
+        rabbitTemplate.convertAndSend(exchangeName, "china.weather", message);
+    }
+
+    @Test
+    public void testSendTopicExchange3() {
+        // 交换机名称
+        String exchangeName = "demo.topic";
+        // 消息
+        String message = "日本新闻";
+        // 发送消息
+        rabbitTemplate.convertAndSend(exchangeName, "japan.news", message);
+    }
+
+    @Test
+    public void testSendTopicExchange4() {
+        // 交换机名称
+        String exchangeName = "demo.topic";
+        // 消息
+        String message = "日本的天气消息";
+        // 发送消息
+        rabbitTemplate.convertAndSend(exchangeName, "japan.weather", message);
+    }
+
 }
